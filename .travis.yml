@@ -4,8 +4,8 @@ services:
 
 script:
     - docker build -t adistiffler/travis .
-    - docker tag adistiffler/travis adistiffler/travis:1.0 
-    - docker images adistiffler/travis:1.0
+    - docker tag adistiffler/travis adistiffler/travis:2.0 
+    - docker images adistiffler/travis:2.0
 
 before_deploy:
     - docker login -u adistiffler -p Babu@1987
