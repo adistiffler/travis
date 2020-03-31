@@ -1,0 +1,16 @@
+sudo: required
+services:
+    - docker
+
+script:
+    - docker build -t adistiffler/node .
+    - docker images adistiffler/node
+
+before_deploy:
+    - docker login -u adistiffler -p Babu@1987
+
+deploy:
+    provider: script
+    script: docker push adistiffler/travis
+    on:
+        branch: master
